@@ -1,8 +1,9 @@
-import { loadNotes, onNewNote } from './socket.js';
-import { appendNote, onHandleSubmit, renderNotes } from './ui.js';
+import { loadNotes, onNewNote, onSelectNote } from './socket.js';
+import { appendNote, onHandleSubmit, renderNotes, fillForm } from './ui.js';
 
 onNewNote(appendNote);
 loadNotes(renderNotes);
+onSelectNote(fillForm);
 
 const noteForm = document.querySelector('#noteForm');
 
